@@ -1,0 +1,11 @@
+import random
+
+s = '+-/*!&$#?=@<>abcdefghijklnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890ЯЧСМИТЬБЮФЫВАПРОЛДЖЭЙЦУКЕНГШЩЗХЪячсмитьбюфывапролджэйцукенгшщзхъ'
+psw = 1 
+length = int(input('Длина пароля?'+ "\n"))
+for n in range(psw):
+    password ='Полученный пароль: '
+    for i in range(length):
+        password += random.choice(s)
+with open('GPassword.txt', 'w') as file:
+    file.write(password)
